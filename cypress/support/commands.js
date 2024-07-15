@@ -1,3 +1,11 @@
+Cypress.Commands.add('login', (email, password) => { 
+    cy.get('[data-test="input-loginEmail"]').type(email);
+    cy.wait(2000); // Pausa de 2 segundos
+    cy.get('[data-test="input-loginPassword"]').type(password);
+    cy.wait(2000); // Pausa de 2 segundos
+    cy.get('[data-test="submit-button"]').click();
+ })
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
